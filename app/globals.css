@@ -1,26 +1,51 @@
 @import "tailwindcss";
 
+@theme {
+  --font-outfit: var(--font-outfit), sans-serif;
+  --font-plus-jakarta: var(--font-plus-jakarta-sans), sans-serif;
+
+  --color-brand-navy: #0A192F;
+  --color-brand-teal: #0D9488;
+  --color-brand-cyan: #06B6D4;
+  --color-brand-dark: #070F19;
+  --color-brand-dark-blue: #0A1A2F;
+  --color-brand-light-teal: #F0FDFA;
+
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-pulse-subtle: pulse-subtle 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.9; transform: scale(0.98); }
+}
+
 :root {
   --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --foreground: #0A192F;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-plus-jakarta-sans), sans-serif;
+  overflow-x: hidden;
 }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-outfit), sans-serif;
+}
+
+.bg-grid-pattern {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(10, 25, 47, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(10, 25, 47, 0.03) 1px, transparent 1px);
+}
+
+
