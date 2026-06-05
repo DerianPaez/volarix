@@ -17,7 +17,6 @@ export const AboutValues: React.FC = () => {
           {values.map((val, idx) => (
             <AboutCard
               key={idx}
-              as="li"
               size="sm"
               icon={val.icon}
               title={val.title}
