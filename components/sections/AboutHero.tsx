@@ -9,10 +9,10 @@ export const AboutHero: React.FC = () => {
           CONOCE NUESTRO ORIGEN
         </span>
         <h1 className="font-outfit text-4xl font-extrabold text-white tracking-tight sm:text-6xl mt-3 leading-tight max-w-4xl mx-auto">
-          Redefiniendo el viaje de
+          Transformando la forma de gestionar viajes
           <br />
           <span className="bg-linear-to-r from-brand-teal to-brand-cyan bg-clip-text text-transparent">
-            lujo y confort
+            Menos trámites, más destinos
           </span>
         </h1>
         <p className="max-w-2xl mx-auto text-slate-400 text-base md:text-lg mt-6 leading-relaxed">
