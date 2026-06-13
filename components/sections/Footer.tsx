@@ -43,12 +43,17 @@ export const Footer: React.FC = () => {
                 <ul className="flex flex-col space-y-2.5">
                   {col.links.map((link, linkIdx) => (
                     <li key={linkIdx}>
-                      <Link
-                        href={link.href}
-                        className="text-slate-500 hover:text-brand-teal text-sm transition-colors duration-200"
-                      >
-                        {link.label}
-                      </Link>
+                      {link.href == "" ? (
+                        <span className="text-slate-500 text-sm transition-colors duration-200">{link.label}</span>
+                        ) : (
+                          <Link
+                            href={link.href}
+                            className="text-slate-500 hover:text-brand-teal text-sm transition-colors duration-200"
+                          >
+                            {link.label}
+                          </Link>
+                        )
+                      }
                     </li>
                   ))}
                 </ul>
@@ -61,7 +66,6 @@ export const Footer: React.FC = () => {
           <p className="text-sm">© {new Date().getFullYear()} Volarix. Todos los derechos reservados.</p>
           <div className="flex gap-6">
             <Link href="#" className="hover:text-slate-600 transition-colors text-sm">Aviso Legal</Link>
-            <Link href="#" className="hover:text-slate-600 transition-colors text-sm">Cookies</Link>
           </div>
         </div>
       </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa6";
+import { FaFacebookF, FaInstagram, FaTiktok } from "react-icons/fa6";
 
 export type NavLink = {
   label: string;
@@ -30,25 +30,25 @@ export const footerLinks: FooterLinkGroup[] = [
     title: "Compañía",
     links: [
       { label: "Sobre Nosotros", href: "/sobre-nosotros" },
-      { label: "Carreras", href: "#" },
-      { label: "Blog de Viajes", href: "#" },
-      { label: "Prensa", href: "#" },
+      { label: "Servicios", href: "/#servicios" },
+      { label: "Pasos", href: "/#pasos" },
+      { label: "Testimonios", href: "/#testimonios" },
     ],
   },
   {
     title: "Destinos",
     links: [
-      { label: "Europa", href: "#" },
-      { label: "Asia y Pacífico", href: "#" },
-      { label: "América Latina", href: "#" },
-      { label: "África y Oriente", href: "#" },
+      { label: "Europa", href: "" },
+      { label: "Asia y Pacífico", href: "" },
+      { label: "América Latina", href: "" },
+      { label: "África y Oriente", href: "" },
     ],
   },
   {
     title: "Soporte",
     links: [
-      { label: "Centro de Ayuda", href: "#" },
-      { label: "Contacto", href: "#contacto" },
+      { label: "Hablar con un asesor", href: "#" },
+      { label: "Contacto", href: "/#contacto" },
       { label: "Términos de Servicio", href: "#" },
       { label: "Privacidad", href: "#" },
     ],
@@ -67,8 +67,8 @@ export const socialLinks: SocialLink[] = [
     href: "#",
   },
   {
-    label: "LinkedIn",
-    icon: FaLinkedinIn,
+    label: "Tiktok",
+    icon: FaTiktok,
     href: "#",
   },
 ];
