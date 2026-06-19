@@ -65,7 +65,7 @@ export const Footer: React.FC = () => {
         <div className="border-t border-slate-200/60 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs font-medium text-slate-400">
           <p className="text-sm">© {new Date().getFullYear()} Volarix. Todos los derechos reservados.</p>
           <div className="flex gap-6">
-            <Link href="#" className="hover:text-slate-600 transition-colors text-sm">Aviso Legal</Link>
+            <Link href="/aviso-legal" className="hover:text-slate-600 transition-colors text-sm">Aviso Legal</Link>
           </div>
         </div>
       </div>
