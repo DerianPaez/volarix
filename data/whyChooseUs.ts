@@ -8,6 +8,7 @@ export type WhyChooseUsItem = {
   image: string;
   imageAlt: string;
   reverse: boolean;
+  whatsappMessage?: string;
 };
 
 export const whyChooseUsList: WhyChooseUsItem[] = [
@@ -22,6 +23,7 @@ export const whyChooseUsList: WhyChooseUsItem[] = [
     image: "/orchid_flower.png",
     imageAlt: "Flor de orquídea exótica",
     reverse: false,
+    whatsappMessage: "Hola Volarix! Me gustaría obtener más información sobre su servicio de gestión integral de viajes y visados.",
   },
   {
     id: "02",
@@ -34,6 +36,7 @@ export const whyChooseUsList: WhyChooseUsItem[] = [
     image: "/sunset_ocean.png",
     imageAlt: "Puesta de sol en el océano",
     reverse: true,
+    whatsappMessage: "Hola Volarix! Me interesa saber cómo funciona su proceso de digitalización total para simplificar mis trámites de viaje.",
   },
   {
     id: "03",
@@ -46,5 +49,6 @@ export const whyChooseUsList: WhyChooseUsItem[] = [
     image: "/waterfall_rocks.png",
     imageAlt: "Cascada majestuosa en la naturaleza",
     reverse: false,
+    whatsappMessage: "Hola Volarix! Quiero conocer más detalles sobre el soporte premium y el respaldo de viaje 24/7 que ofrecen.",
   },
 ];

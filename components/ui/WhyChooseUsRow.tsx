@@ -9,7 +9,15 @@ type WhyChooseUsRowProps = {
   item: WhyChooseUsItem;
 };
 
+// Reemplaza este número por tu número de WhatsApp real (formato internacional, solo números sin "+", espacios ni guiones)
+// Ejemplo: "34600123456" para España o "5215512345678" para México
+const WHATSAPP_PHONE = "34900123456";
+
 export const WhyChooseUsRow: React.FC<WhyChooseUsRowProps> = ({ item }) => {
+  const whatsappUrl = `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(
+    item.whatsappMessage || "Hola Volarix! Me gustaría obtener más información."
+  )}`;
+
   return (
     <li
       className={`flex flex-col lg:flex-row lg:items-center gap-12 lg:gap-16 ${
@@ -60,7 +68,9 @@ export const WhyChooseUsRow: React.FC<WhyChooseUsRowProps> = ({ item }) => {
 
         <div>
           <Link
-            href="#contacto"
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-sm font-bold text-brand-navy hover:text-brand-teal transition-colors group cursor-pointer"
           >
             <span>Saber más</span>
