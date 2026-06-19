@@ -49,8 +49,8 @@ export const footerLinks: FooterLinkGroup[] = [
     links: [
       { label: "Hablar con un asesor", href: "#" },
       { label: "Contacto", href: "/#contacto" },
-      { label: "Términos de Servicio", href: "#" },
-      { label: "Privacidad", href: "#" },
+      { label: "Términos de Servicio", href: "/terminos-de-servicio" },
+      { label: "Privacidad", href: "/politica-de-privacidad" },
     ],
   },
 ];
