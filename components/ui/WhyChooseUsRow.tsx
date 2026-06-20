@@ -9,8 +9,6 @@ type WhyChooseUsRowProps = {
   item: WhyChooseUsItem;
 };
 
-// Reemplaza este número por tu número de WhatsApp real (formato internacional, solo números sin "+", espacios ni guiones)
-// Ejemplo: "34600123456" para España o "5215512345678" para México
 const WHATSAPP_PHONE = "34900123456";
 
 export const WhyChooseUsRow: React.FC<WhyChooseUsRowProps> = ({ item }) => {
