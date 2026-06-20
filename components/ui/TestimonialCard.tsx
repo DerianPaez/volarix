@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/image";
+import { FiUser } from "react-icons/fi";
 import { StarRating } from "@/components/ui/StarRating";
 import { ReviewItem } from "@/data/testimonials";
 
@@ -30,14 +30,8 @@ export const TestimonialCard: React.FC<TestimonialCardProps> = ({ item }) => {
       </div>
 
       <figcaption className="flex items-center gap-4.5">
-        <div className="relative h-12 w-12 overflow-hidden rounded-full border border-slate-100">
-          <Image
-            src={item.avatar}
-            alt={item.name}
-            fill
-            className="object-cover"
-            sizes="48px"
-          />
+        <div className="flex h-12 w-12 items-center justify-center rounded-full bg-brand-light-teal text-brand-teal border border-brand-teal/10 group-hover:bg-brand-teal group-hover:text-white transition-all duration-300">
+          <FiUser className="h-5 w-5" />
         </div>
         <div>
           <span className="font-outfit text-sm lg:text-xl font-bold text-brand-navy block">
