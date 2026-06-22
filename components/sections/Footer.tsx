@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
-import { FaPaperPlane } from "react-icons/fa6";
 import { footerLinks, socialLinks } from "@/data/navigation";
+import Image from "next/image";
 
 export const Footer: React.FC = () => {
   return (
@@ -10,12 +10,12 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-8 pb-12 md:pb-16">
           <div className="md:col-span-4 flex flex-col space-y-5">
             <Link href="#" className="flex items-center gap-2.5 group w-fit">
-              <div className="relative flex h-9 w-9 items-center justify-center rounded-full bg-brand-navy text-white shadow-md shadow-brand-navy/10 group-hover:scale-105 transition-transform duration-300">
-                <FaPaperPlane className="h-3.5 w-3.5 text-brand-cyan -rotate-12" />
-              </div>
-              <span className="font-outfit text-2xl font-bold tracking-tight text-brand-navy">
-                volarix
-              </span>
+              <Image
+                src="/logo_volarix.png"
+                alt="Logo de Volarix"
+                width={130}
+                height={30}
+              />
             </Link>
             <p className="text-slate-500 text-sm lg:text-base leading-relaxed max-w-xs">
               Tu aliado para vuelos, visas y trámites internacionales. Atención rápida, asesoría personalizada y gestión eficiente en un solo lugar.
