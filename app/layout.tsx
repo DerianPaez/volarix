@@ -18,9 +18,27 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Volarix | Viajar debería sentirse sencillo",
-  description: "Planifica, reserva y gestiona tu próximo viaje de lujo sin complicaciones. La experiencia de viaje inteligente completa con soporte premium 24/7.",
-  keywords: ["viajes", "turismo de lujo", "reservas de vuelos", "hoteles exclusivos", "itinerario digital"],
+  metadataBase: new URL("https://volarix.com"),
+
+  title: {
+    default: "Volarix | Vuelos, Visas y Trámites Internacionales",
+    template: "%s | Volarix"
+  },
+  description: "Gestionamos vuelos, visas y trámites internacionales de forma rápida, segura y personalizada. Viaja sin complicaciones con Volarix.",
+  keywords: ["agencia de viajes", "visas", "vuelos", "trámites internacionales", "viajes internacionales", "asesoría migratoria", "Volarix"],
+  authors: { 
+    name: "Volarix",
+  },
+  robots: {
+    index: true, 
+    follow: true
+  },
+  openGraph: {
+    type: "website",
+    locale: "es_EC",
+    url: "https://volarix.com",
+    siteName: "Volarix",
+  }
 };
 
 type RootLayoutProps = {
@@ -35,7 +53,7 @@ const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
     >
       <body className="min-h-screen flex flex-col bg-white text-brand-navy overflow-x-hidden">
         <Navbar />
-        <main className="flex-grow">
+        <main>
           {children}
         </main>
         <Footer />
