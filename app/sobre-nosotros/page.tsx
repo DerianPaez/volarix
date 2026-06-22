@@ -7,9 +7,8 @@ import { AboutValues } from "@/components/sections/AboutValues";
 import { AboutCTA } from "@/components/sections/AboutCTA";
 
 export const metadata: Metadata = {
-  title: "Sobre Nosotros | Volarix",
-  description: "Descubre la historia, misión, valores y el equipo de expertos detrás de Volarix. Redefinimos los viajes de lujo haciéndolos más sencillos, personalizados y memorables.",
-  keywords: ["sobre volarix", "equipo volarix", "viajes de lujo a medida", "historia volarix", "turismo exclusivo"],
+  title: "Nosotros",
+  description: "Conoce la historia de Volarix, nuestra misión, visión y compromiso para ayudarte a gestionar vuelos, visas y trámites internacionales de forma rápida y segura.",
 };
 
 const SobreNosotrosPage: React.FC = () => {
