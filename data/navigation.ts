@@ -59,16 +59,16 @@ export const socialLinks: SocialLink[] = [
   {
     label: "Facebook",
     icon: FaFacebookF,
-    href: "#",
+    href: "https://www.facebook.com/profile.php?id=61590212824668",
   },
   {
     label: "Instagram",
     icon: FaInstagram,
-    href: "#",
+    href: "https://www.instagram.com/volarix.ec/",
   },
   {
     label: "Tiktok",
     icon: FaTiktok,
-    href: "#",
+    href: "https://www.tiktok.com/@volarix.ec",
   },
 ];
