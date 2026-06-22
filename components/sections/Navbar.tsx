@@ -2,10 +2,11 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { FaPaperPlane } from "react-icons/fa6";
 import { FiMenu, FiX } from "react-icons/fi";
 import { Button } from "@/components/ui/Button";
 import { navLinks } from "@/data/navigation";
+import Image from "next/image";
+
 
 export const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,14 +14,14 @@ export const Navbar: React.FC = () => {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-slate-100 bg-white/80 backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl h-20 items-center justify-between px-6 md:px-10">
-        <Link href="" className="flex items-center gap-2.5 group">
-          <div className="relative flex h-9 w-9 items-center justify-center rounded-full bg-brand-navy text-white shadow-md shadow-brand-navy/10 group-hover:scale-105 transition-transform duration-300">
-            <FaPaperPlane className="h-3.5 w-3.5 text-brand-cyan -rotate-12" />
-            <div className="absolute -inset-0.5 rounded-full border border-brand-teal/30 group-hover:border-brand-teal group-hover:scale-110 transition-all duration-300" />
-          </div>
-          <span className="font-outfit text-2xl font-bold tracking-tight text-brand-navy">
-            volarix
-          </span>
+        <Link href="/" className="flex items-center group">
+          <Image 
+            src="/logo_volarix.png"
+            alt="Logo de Volarix"
+            width={180}
+            height={50}
+            priority
+          />
         </Link>
 
         <nav className="hidden md:flex items-center gap-8">
