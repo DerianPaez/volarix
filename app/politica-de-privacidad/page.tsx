@@ -15,9 +15,8 @@ import {
 import { LegalCard } from "@/components/ui/LegalCard";
 
 export const metadata: Metadata = {
-  title: "Política de Privacidad | Volarix",
-  description: "Conoce cómo recopilamos, usamos y protegemos tus datos personales en Volarix. Transparencia, seguridad y total confidencialidad en tus viajes.",
-  keywords: ["politica de privacidad", "privacidad volarix", "proteccion de datos", "viajes de lujo", "seguridad volarix"],
+  title: "Política de Privacidad",
+  description: "Conoce cómo Volarix recopila, utiliza, protege y comparte tus datos personales al gestionar vuelos, visas y trámites internacionales. Tu privacidad y seguridad son nuestra prioridad.",
 };
 
 const PoliticaPrivacidadPage: React.FC = () => {
@@ -177,7 +176,6 @@ const PoliticaPrivacidadPage: React.FC = () => {
               </div>
             </div>
           </div>
-
         </div>
       </section>
     </div>
