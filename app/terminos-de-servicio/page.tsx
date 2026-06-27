@@ -14,9 +14,8 @@ import {
 import { LegalCard } from "@/components/ui/LegalCard";
 
 export const metadata: Metadata = {
-  title: "Términos de Servicio | Volarix",
-  description: "Conoce las condiciones, cotizaciones, políticas de cancelación y responsabilidades bajo las cuales prestamos nuestros servicios en Volarix.",
-  keywords: ["terminos de servicio", "condiciones de servicio", "cotizaciones volarix", "viajes exclusivos", "volarix"],
+  title: "Términos de Servicio",
+  description: "Consulta los Términos de Servicio de Volarix. Conoce las condiciones de uso, cotizaciones, pagos, cancelaciones, responsabilidades y políticas aplicables a nuestros servicios de vuelos, visas y trámites internacionales.",
 };
 
 const TerminosServicioPage: React.FC = () => {
