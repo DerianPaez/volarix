@@ -15,9 +15,8 @@ import {
 import { LegalCard } from "@/components/ui/LegalCard";
 
 export const metadata: Metadata = {
-  title: "Aviso Legal | Volarix",
-  description: "Información legal, titularidad del sitio web, condiciones de uso y límites de responsabilidad de Volarix.",
-  keywords: ["aviso legal", "titularidad volarix", "condiciones de uso", "volarix"],
+  title: "Aviso Legal",
+  description: "Consulta el Aviso Legal de Volarix. Conoce la información sobre la titularidad del sitio web, condiciones de uso, propiedad intelectual, limitación de responsabilidad y legislación aplicable.",
 };
 
 const AvisoLegalPage: React.FC = () => {
