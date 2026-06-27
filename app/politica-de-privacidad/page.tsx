@@ -23,10 +23,7 @@ export const metadata: Metadata = {
 const PoliticaPrivacidadPage: React.FC = () => {
   return (
     <div className="bg-slate-50 min-h-screen pb-20 md:pb-28">
-      <section className="relative py-20 md:py-28 bg-[#0A192F] overflow-hidden text-center">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 h-[500px] w-[500px] rounded-full bg-brand-teal/15 blur-[120px]" />
-        <div className="absolute top-12 left-1/4 -z-10 h-[300px] w-[300px] rounded-full bg-brand-cyan/10 blur-[100px]" />
-        
+      <section className="relative py-20 md:py-28 bg-brand-navy overflow-hidden text-center">
         <div className="mx-auto max-w-5xl px-6 md:px-10">
           <span className="text-xs font-bold uppercase tracking-widest text-brand-cyan">
             Transparencia y Seguridad
@@ -43,17 +40,17 @@ const PoliticaPrivacidadPage: React.FC = () => {
       <section className="mx-auto max-w-5xl px-6 md:px-10 -mt-10 relative z-10">
         <div className="grid gap-8">
           
-          <LegalCard icon={<FiShield className="h-6 w-6" />} title="1. Responsable del Tratamiento">
-            <p className="text-slate-600 text-base md:text-lg leading-relaxed">
-              Volarix es responsable del tratamiento de tus datos personales, garantizando que su recopilación y uso se realicen bajo los más estrictos estándares de confidencialidad y conforme a la normativa vigente.
-            </p>
-          </LegalCard>
+          <LegalCard 
+            icon={<FiShield className="h-6 w-6" />} 
+            title="1. Responsable del Tratamiento"
+            description="Volarix es responsable del tratamiento de tus datos personales, garantizando que su recopilación y uso se realicen bajo los más estrictos estándares de confidencialidad y conforme a la normativa vigente."
+          />
 
-          <LegalCard icon={<FiDatabase className="h-6 w-6" />} title="2. Qué datos recopilamos y por qué">
-            <p className="text-slate-600 text-base md:text-lg leading-relaxed">
-              Recopilamos únicamente la información necesaria para brindarte la mejor experiencia de viaje personalizada.
-            </p>
-            
+          <LegalCard 
+            icon={<FiDatabase className="h-6 w-6" />} 
+            title="2. Qué datos recopilamos y por qué"
+            description="Recopilamos únicamente la información necesaria para brindarte la mejor experiencia de viaje personalizada."
+          >
             <div className="overflow-x-auto border border-slate-100 rounded-2xl mt-4">
               <table className="w-full text-left border-collapse text-sm md:text-base">
                 <thead>
@@ -86,26 +83,28 @@ const PoliticaPrivacidadPage: React.FC = () => {
             </div>
           </LegalCard>
 
-          <LegalCard icon={<FiInbox className="h-6 w-6" />} title="3. Cómo recopilamos tus datos">
-            <p className="text-slate-600 text-base md:text-lg leading-relaxed">
-              Obtenemos tu información exclusivamente a través de interacciones directas e intencionadas:
-            </p>
+          <LegalCard 
+            icon={<FiInbox className="h-6 w-6" />} 
+            title="3. Cómo recopilamos tus datos"
+            description="Obtenemos tu información exclusivamente a través de interacciones directas e intencionadas:"
+          >
             <ul className="list-disc pl-5 space-y-2 text-slate-600 text-base md:text-lg leading-relaxed">
               <li>Cuando nos escribes directamente por WhatsApp, a través de nuestro correo electrónico o al enviar el formulario de contacto de la web.</li>
               <li>Cuando nos proporcionas detalles necesarios para realizar una cotización de viaje o tramitar un visado.</li>
             </ul>
           </LegalCard>
 
-          <LegalCard icon={<FiCreditCard className="h-6 w-6" />} title="4. No usamos pasarelas de pago en el sitio web">
-            <p className="text-slate-600 text-base md:text-lg leading-relaxed">
-              Para tu máxima seguridad, no procesamos cobros de forma automatizada en esta plataforma. Todas las transacciones económicas y métodos de pago se coordinan directamente de forma privada con tu asesor exclusivo. No deberás ingresar datos de tarjetas de crédito o débito en nuestra página web.
-            </p>
-          </LegalCard>
+          <LegalCard 
+            icon={<FiCreditCard className="h-6 w-6" />} 
+            title="4. No usamos pasarelas de pago en el sitio web"
+            description="Para tu máxima seguridad, no procesamos cobros de forma automatizada en esta plataforma. Todas las transacciones económicas y métodos de pago se coordinan directamente de forma privada con tu asesor exclusivo. No deberás ingresar datos de tarjetas de crédito o débito en nuestra página web."
+          />
 
-          <LegalCard icon={<FiShare2 className="h-6 w-6" />} title="5. Con quién compartimos tus datos">
-            <p className="text-slate-600 text-base md:text-lg leading-relaxed">
-              Compartimos tu información únicamente cuando es estrictamente necesario para operar tu viaje y gestionar tus reservas con los proveedores finales:
-            </p>
+          <LegalCard 
+            icon={<FiShare2 className="h-6 w-6" />} 
+            title="5. Con quién compartimos tus datos"
+            description="Compartimos tu información únicamente cuando es estrictamente necesario para operar tu viaje y gestionar tus reservas con los proveedores finales:"
+          >
             <ul className="list-disc pl-5 space-y-2 text-slate-600 text-base md:text-lg leading-relaxed">
               <li><strong>Aerolíneas:</strong> Para emitir y confirmar tus reservas de vuelos.</li>
               <li><strong>Entidades migratorias o consulados:</strong> Para llevar a cabo el trámite y gestión de tu visado.</li>
@@ -115,10 +114,11 @@ const PoliticaPrivacidadPage: React.FC = () => {
             </p>
           </LegalCard>
 
-          <LegalCard icon={<FiCheckSquare className="h-6 w-6" />} title="6. Tus derechos">
-            <p className="text-slate-600 text-base md:text-lg leading-relaxed">
-              Como titular de tus datos personales, puedes solicitar en cualquier momento:
-            </p>
+          <LegalCard 
+            icon={<FiCheckSquare className="h-6 w-6" />} 
+            title="6. Tus derechos"
+            description="Como titular de tus datos personales, puedes solicitar en cualquier momento:"
+          >
             <ul className="list-disc pl-5 space-y-2 text-slate-600 text-base md:text-lg leading-relaxed">
               <li>Saber con precisión qué datos personales almacenamos sobre ti.</li>
               <li>Corregir, actualizar o rectificar tu información.</li>
@@ -129,11 +129,11 @@ const PoliticaPrivacidadPage: React.FC = () => {
             </p>
           </LegalCard>
 
-          <LegalCard icon={<FiLock className="h-6 w-6" />} title="7. Seguridad de la información">
-            <p className="text-slate-600 text-base md:text-lg leading-relaxed">
-              Protegemos tu información personal implementando medidas organizativas y de acceso limitado (los datos solo están al alcance del personal directamente encargado de la gestión de tu viaje y se transmiten por canales privados y seguros). Debido a que no recopilamos ni almacenamos datos de pago o información sumamente sensible en nuestro servidor web, el riesgo de filtraciones es mínimo.
-            </p>
-          </LegalCard>
+          <LegalCard 
+            icon={<FiLock className="h-6 w-6" />} 
+            title="7. Seguridad de la información"
+            description="Protegemos tu información personal implementando medidas organizativas y de acceso limitado (los datos solo están al alcance del personal directamente encargado de la gestión de tu viaje y se transmiten por canales privados y seguros). Debido a que no recopilamos ni almacenamos datos de pago o información sumamente sensible en nuestro servidor web, el riesgo de filtraciones es mínimo."
+          />
 
           <div className="bg-linear-to-r from-brand-navy to-brand-dark-blue rounded-3xl p-8 md:p-10 shadow-xl text-white relative overflow-hidden group">
             <div className="absolute top-1/2 right-0 -translate-y-1/2 h-[300px] w-[300px] rounded-full bg-brand-teal/10 blur-[80px]" />

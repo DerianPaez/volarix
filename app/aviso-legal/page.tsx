@@ -23,12 +23,7 @@ export const metadata: Metadata = {
 const AvisoLegalPage: React.FC = () => {
   return (
     <div className="bg-slate-50 min-h-screen pb-20 md:pb-28">
-      {/* Hero Header */}
       <section className="relative py-20 md:py-28 bg-brand-navy overflow-hidden text-center">
-        {/* Glow Effects */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 h-[500px] w-[500px] rounded-full bg-brand-teal/15 blur-[120px]" />
-        <div className="absolute top-12 left-1/4 -z-10 h-[300px] w-[300px] rounded-full bg-brand-cyan/10 blur-[100px]" />
-        
         <div className="mx-auto max-w-5xl px-6 md:px-10">
           <span className="text-xs font-bold uppercase tracking-widest text-brand-cyan">
             Información de Titularidad
@@ -42,14 +37,14 @@ const AvisoLegalPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Content Body */}
       <section className="mx-auto max-w-5xl px-6 md:px-10 -mt-10 relative z-10">
         <div className="grid gap-8">
           
-          <LegalCard icon={<FiUser className="h-6 w-6" />} title="1. Titular del sitio web">
-            <p className="text-slate-600 text-base md:text-lg leading-relaxed mb-4">
-              El titular y responsable de este sitio web es **Volarix**.
-            </p>
+          <LegalCard 
+            icon={<FiUser className="h-6 w-6" />} 
+            title="1. Titular del sitio web"
+            description="El titular y responsable de este sitio web es Volarix."
+          >
             <ul className="space-y-2 text-slate-600 text-base md:text-lg leading-relaxed">
               <li><strong>Dirección:</strong> Quito, Ecuador</li>
               <li><strong>Correo electrónico:</strong> viajes@volarix.com</li>
@@ -57,16 +52,17 @@ const AvisoLegalPage: React.FC = () => {
             </ul>
           </LegalCard>
 
-          <LegalCard icon={<FiCompass className="h-6 w-6" />} title="2. Actividad principal">
-            <p className="text-slate-600 text-base md:text-lg leading-relaxed">
-              Volarix se dedica a la gestión de reservas de vuelos, asesoramiento personalizado para trámites de visas internacionales y la organización de paquetes turísticos exclusivos. Todos nuestros servicios se coordinan y formalizan de manera directa con un asesor asignado a través de canales externos (WhatsApp, correo electrónico o llamadas telefónicas).
-            </p>
-          </LegalCard>
+          <LegalCard 
+            icon={<FiCompass className="h-6 w-6" />} 
+            title="2. Actividad principal"
+            description="Volarix se dedica a la gestión de reservas de vuelos, asesoramiento personalizado para trámites de visas internacionales y la organización de paquetes turísticos exclusivos. Todos nuestros servicios se coordinan y formalizan de manera directa con un asesor asignado a través de canales externos (WhatsApp, correo electrónico o llamadas telefónicas)."
+          />
 
-          <LegalCard icon={<FiEye className="h-6 w-6" />} title="3. Condiciones de uso del sitio web">
-            <p className="text-slate-600 text-base md:text-lg leading-relaxed">
-              El acceso, navegación y uso de este sitio web implica la aceptación expresa de las siguientes condiciones:
-            </p>
+          <LegalCard 
+            icon={<FiEye className="h-6 w-6" />} 
+            title="3. Condiciones de uso del sitio web"
+            description="El acceso, navegación y uso de este sitio web implica la aceptación expresa de las siguientes condiciones:"
+          >
             <ul className="list-disc pl-5 space-y-2 text-slate-600 text-base md:text-lg leading-relaxed">
               <li>El contenido de esta web tiene un carácter exclusivamente informativo y promocional.</li>
               <li>No se realizan transacciones comerciales ni cobros directos a través del sitio web.</li>
@@ -75,16 +71,17 @@ const AvisoLegalPage: React.FC = () => {
             </ul>
           </LegalCard>
 
-          <LegalCard icon={<FiFolder className="h-6 w-6" />} title="4. Propiedad intelectual">
-            <p className="text-slate-600 text-base md:text-lg leading-relaxed">
-              Todos los textos, imágenes, logotipos, elementos gráficos, código fuente y diseños de este sitio web son propiedad exclusiva de Volarix o se utilizan bajo las licencias correspondientes. Queda estrictamente prohibida la reproducción, distribución, transformación o comunicación pública, total o parcial, de cualquiera de estos contenidos sin la autorización expresa y por escrito de sus titulares.
-            </p>
-          </LegalCard>
+          <LegalCard 
+            icon={<FiFolder className="h-6 w-6" />} 
+            title="4. Propiedad intelectual"
+            description="Todos los textos, imágenes, logotipos, elementos gráficos, código fuente y diseños de este sitio web son propiedad exclusiva de Volarix o se utilizan bajo las licencias correspondientes. Queda estrictamente prohibida la reproducción, distribución, transformación o comunicación pública, total o parcial, de cualquiera de estos contenidos sin la autorización expresa y por escrito de sus titulares."
+          />
 
-          <LegalCard icon={<FiAlertTriangle className="h-6 w-6" />} title="5. Exclusión de responsabilidad">
-            <p className="text-slate-600 text-base md:text-lg leading-relaxed">
-              Volarix no se hace responsable por:
-            </p>
+          <LegalCard 
+            icon={<FiAlertTriangle className="h-6 w-6" />} 
+            title="5. Exclusión de responsabilidad"
+            description="Volarix no se hace responsable por:"
+          >
             <ul className="list-disc pl-5 space-y-2 text-slate-600 text-base md:text-lg leading-relaxed">
               <li>Eventuales errores u omisiones en la información publicada (si bien trabajamos continuamente para mantener los datos precisos y actualizados).</li>
               <li>Problemas técnicos, indisponibilidad temporal del sitio o fallos de conexión ajenos a nuestro control.</li>
@@ -92,19 +89,18 @@ const AvisoLegalPage: React.FC = () => {
             </ul>
           </LegalCard>
 
-          <LegalCard icon={<FiExternalLink className="h-6 w-6" />} title="6. Enlaces externos">
-            <p className="text-slate-600 text-base md:text-lg leading-relaxed">
-              Este sitio web puede contener enlaces de hipervínculo a páginas web de terceros (como aerolíneas oficiales, portales de embajadas o ministerios de relaciones exteriores). Volarix no ejerce ningún tipo de control ni supervisión sobre dichos sitios y no asume responsabilidad alguna por el contenido, políticas de privacidad o términos de uso de estas plataformas externas.
-            </p>
-          </LegalCard>
+          <LegalCard 
+            icon={<FiExternalLink className="h-6 w-6" />} 
+            title="6. Enlaces externos"
+            description="Este sitio web puede contener enlaces de hipervínculo a páginas web de terceros (como aerolíneas oficiales, portales de embajadas o ministerios de relaciones exteriores). Volarix no ejerce ningún tipo de control ni supervisión sobre dichos sitios y no asume responsabilidad alguna por el contenido, políticas de privacidad o términos de uso de estas plataformas externas."
+          />
 
-          <LegalCard icon={<FiBookOpen className="h-6 w-6" />} title="7. Legislación aplicable y jurisdicción">
-            <p className="text-slate-600 text-base md:text-lg leading-relaxed">
-              Este Aviso Legal se rige e interpreta en su totalidad de conformidad con las leyes vigentes de la República del Ecuador. Cualquier controversia, conflicto o reclamación relacionada con el uso de este sitio web o la interpretación de sus condiciones será sometida exclusivamente a la jurisdicción y competencia de los tribunales de la ciudad de Quito, Ecuador.
-            </p>
-          </LegalCard>
+          <LegalCard 
+            icon={<FiBookOpen className="h-6 w-6" />} 
+            title="7. Legislación aplicable y jurisdicción"
+            description="Este Aviso Legal se rige e interpreta en su totalidad de conformidad con las leyes vigentes de la República del Ecuador. Cualquier controversia, conflicto o reclamación relacionada con el uso de este sitio web o la interpretación de sus condiciones será sometida exclusivamente a la jurisdicción y competencia de los tribunales de la ciudad de Quito, Ecuador."
+          />
 
-          {/* Contact Card */}
           <div className="bg-linear-to-r from-brand-navy to-brand-dark-blue rounded-3xl p-8 md:p-10 shadow-xl text-white relative overflow-hidden group">
             <div className="absolute top-1/2 right-0 -translate-y-1/2 h-[300px] w-[300px] rounded-full bg-brand-teal/10 blur-[80px]" />
             

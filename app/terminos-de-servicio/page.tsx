@@ -23,9 +23,6 @@ const TerminosServicioPage: React.FC = () => {
   return (
     <div className="bg-slate-50 min-h-screen pb-20 md:pb-28">
       <section className="relative py-20 md:py-28 bg-brand-navy overflow-hidden text-center">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 h-[500px] w-[500px] rounded-full bg-brand-teal/15 blur-[120px]" />
-        <div className="absolute top-12 left-1/4 -z-10 h-[300px] w-[300px] rounded-full bg-brand-cyan/10 blur-[100px]" />
-        
         <div className="mx-auto max-w-5xl px-6 md:px-10">
           <span className="text-xs font-bold uppercase tracking-widest text-brand-cyan">
             Condiciones de Uso
@@ -42,28 +39,33 @@ const TerminosServicioPage: React.FC = () => {
       <section className="mx-auto max-w-5xl px-6 md:px-10 -mt-10 relative z-10">
         <div className="grid gap-8">
           
-          <LegalCard icon={<FiGlobe className="h-6 w-6" />} title="1. Nuestro servicio">
-            <p className="text-slate-600 text-base md:text-lg leading-relaxed">
-              Volarix ofrece la asesoría y gestión de vuelos, visas y trámites internacionales. <strong className="text-brand-navy">Importante:</strong> no somos una aerolínea ni una entidad migratoria oficial. Actuamos exclusivamente como intermediarios profesionales y asesores expertos para facilitarte y simplificar tu experiencia de viaje.
-            </p>
-          </LegalCard>
+          <LegalCard 
+            icon={<FiGlobe className="h-6 w-6" />} 
+            title="1. Nuestro servicio"
+            description={
+              <>
+                Volarix ofrece la asesoría y gestión de vuelos, visas y trámites internacionales. <strong className="text-brand-navy">Importante:</strong> no somos una aerolínea ni una entidad migratoria oficial. Actuamos exclusivamente como intermediarios profesionales y asesores expertos para facilitarte y simplificar tu experiencia de viaje.
+              </>
+            }
+          />
 
-          <LegalCard icon={<FiDollarSign className="h-6 w-6" />} title="2. Cotizaciones y Tarifas">
-            <p className="text-slate-600 text-base md:text-lg leading-relaxed">
-              Todos los precios y tarifas mostrados en las cotizaciones iniciales son referenciales y de carácter informativo. Están sujetos a cambios por fluctuaciones de las aerolíneas, impuestos estatales, tasas aeroportuarias o aranceles de las entidades migratorias oficiales. Una vez confirmada y congelada la cotización por parte de los proveedores, te informaremos el monto final exacto a pagar antes de proceder al cobro.
-            </p>
-          </LegalCard>
+          <LegalCard 
+            icon={<FiDollarSign className="h-6 w-6" />} 
+            title="2. Cotizaciones y Tarifas"
+            description="Todos los precios y tarifas mostrados en las cotizaciones iniciales son referenciales y de carácter informativo. Están sujetos a cambios por fluctuaciones de las aerolíneas, impuestos estatales, tasas aeroportuarias o aranceles de las entidades migratorias oficiales. Una vez confirmada y congelada la cotización por parte de los proveedores, te informaremos el monto final exacto a pagar antes de proceder al cobro."
+          />
 
-          <LegalCard icon={<FiCreditCard className="h-6 w-6" />} title="3. Modalidad de Pagos">
-            <p className="text-slate-600 text-base md:text-lg leading-relaxed">
-              Por tu seguridad, no realizamos cobros ni solicitamos datos financieros directamente en este sitio web. Todas las transacciones económicas y pagos se coordinan de forma privada y directa con tu asesor personal a través de WhatsApp, transferencia bancaria u otro método acordado previamente de mutuo acuerdo.
-            </p>
-          </LegalCard>
+          <LegalCard 
+            icon={<FiCreditCard className="h-6 w-6" />} 
+            title="3. Modalidad de Pagos"
+            description="Por tu seguridad, no realizamos cobros ni solicitamos datos financieros directamente en este sitio web. Todas las transacciones económicas y pagos se coordinan de forma privada y directa con tu asesor personal a través de WhatsApp, transferencia bancaria u otro método acordado previamente de mutuo acuerdo."
+          />
 
-          <LegalCard icon={<FiRefreshCw className="h-6 w-6" />} title="4. Cancelaciones y reembolsos">
-            <p className="text-slate-600 text-base md:text-lg leading-relaxed">
-              Las solicitudes de cancelación y reembolso están sujetas a las siguientes condiciones:
-            </p>
+          <LegalCard 
+            icon={<FiRefreshCw className="h-6 w-6" />} 
+            title="4. Cancelaciones y reembolsos"
+            description="Las solicitudes de cancelación y reembolso están sujetas a las siguientes condiciones:"
+          >
             <ul className="list-disc pl-5 space-y-2 text-slate-600 text-base md:text-lg leading-relaxed">
               <li>Las políticas de cancelación, cambio de fecha y reembolso dependen en su totalidad de cada aerolínea, hotel o entidad emisora de la visa, rigiéndose por sus propios términos y condiciones comerciales.</li>
               <li><strong>Honorarios de gestión:</strong> Los cobros realizados por concepto de asesoría y gestión por parte de Volarix no son reembolsables bajo ninguna circunstancia una vez que se ha iniciado formalmente el trámite de reserva o solicitud de visado.</li>
@@ -71,20 +73,22 @@ const TerminosServicioPage: React.FC = () => {
             </ul>
           </LegalCard>
 
-          <LegalCard icon={<FiUserCheck className="h-6 w-6" />} title="5. Responsabilidad del cliente">
-            <p className="text-slate-600 text-base md:text-lg leading-relaxed">
-              Como cliente y viajero, eres el único responsable de:
-            </p>
+          <LegalCard 
+            icon={<FiUserCheck className="h-6 w-6" />} 
+            title="5. Responsabilidad del cliente"
+            description="Como cliente y viajero, eres el único responsable de:"
+          >
             <ul className="list-disc pl-5 space-y-2 text-slate-600 text-base md:text-lg leading-relaxed">
               <li>Proporcionar información correcta, verídica y actualizada (nombres exactos según documento, fechas de viaje y pasaporte con vigencia mínima requerida).</li>
               <li>Asegurarte de cumplir y contar con todos los requisitos sanitarios y migratorios del país destino o tránsito (visas de turismo/estudios, vacunas obligatorias, formularios de salud, etc.).</li>
             </ul>
           </LegalCard>
 
-          <LegalCard icon={<FiShield className="h-6 w-6" />} title="6. Límites de nuestra responsabilidad">
-            <p className="text-slate-600 text-base md:text-lg leading-relaxed">
-              En Volarix gestionamos cada proceso con el máximo profesionalismo y diligencia. Sin embargo, no asumimos responsabilidad alguna por:
-            </p>
+          <LegalCard 
+            icon={<FiShield className="h-6 w-6" />} 
+            title="6. Límites de nuestra responsabilidad"
+            description="En Volarix gestionamos cada proceso con el máximo profesionalismo y diligencia. Sin embargo, no asumimos responsabilidad alguna por:"
+          >
             <ul className="list-disc pl-5 space-y-2 text-slate-600 text-base md:text-lg leading-relaxed">
               <li>Rechazos, demoras o negativas en la aprobación de visados por parte de los consulados o autoridades migratorias oficiales.</li>
               <li>Cancelaciones, sobreventas (*overbooking*) o retrasos de vuelos por causas climatológicas, huelgas o problemas operativos de la aerolínea.</li>
