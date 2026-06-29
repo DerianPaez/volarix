@@ -5,6 +5,7 @@ import { FiPhone, FiMail, FiClock, FiCheck } from "react-icons/fi";
 import { ContactCard } from "@/components/ui/ContactCard";
 import { ContactForm } from "@/components/ui/ContactForm";
 import { highlights } from "@/data/cta";
+import { CONTACT_INFO } from "@/data/contact";
 
 export const Contact: React.FC = () => {
   return (
@@ -31,16 +32,16 @@ export const Contact: React.FC = () => {
               Habla ahora con uno de nuestros asesores y recibe atención inmediata para vuelos, visas y trámites migratorios. Gestionamos cada paso de forma rápida, segura y online para ayudarte a ahorrar tiempo y obtener resultados en el menor tiempo posible.
             </p>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-10 w-full max-w-md">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-10 w-full max-w-max">
               <ContactCard
                 icon={FiPhone}
                 label="Llámanos"
-                value="+34 900 123 456"
+                value={CONTACT_INFO.phone.display}
               />
               <ContactCard
                 icon={FiMail}
                 label="Escríbenos"
-                value="viajes@volarix.com"
+                value={CONTACT_INFO.email}
               />
               <ContactCard
                 icon={FiClock}

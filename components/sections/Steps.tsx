@@ -3,8 +3,13 @@ import { Button } from "@/components/ui/Button";
 import { steps } from "@/data/steps";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { StepCard } from "@/components/ui/StepCard";
+import { CONTACT_INFO } from "@/data/contact";
 
 export const Steps: React.FC = () => {
+  const whatsappUrl = `https://wa.me/${CONTACT_INFO.phone.whatsapp}?text=${encodeURIComponent(
+    "Hola Volarix! Me gustaría comenzar mi viaje y recibir asesoramiento."
+  )}`;
+
   return (
     <section id="pasos" className="py-20 md:py-28 lg:py-36 bg-slate-50/50">
       <div className="mx-auto max-w-7xl px-6 md:px-10">
@@ -24,7 +29,13 @@ export const Steps: React.FC = () => {
         </ol>
 
         <div className="flex justify-center mt-14 md:mt-20">
-          <Button variant="primary" showArrow>
+          <Button 
+            href={whatsappUrl} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            variant="primary" 
+            showArrow
+          >
             Comenzar viaje
           </Button>
         </div>

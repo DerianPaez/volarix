@@ -13,6 +13,7 @@ import {
   FiPhone 
 } from "react-icons/fi";
 import { LegalCard } from "@/components/ui/LegalCard";
+import { CONTACT_INFO } from "@/data/contact";
 
 export const metadata: Metadata = {
   title: "Aviso Legal",
@@ -46,8 +47,8 @@ const AvisoLegalPage: React.FC = () => {
           >
             <ul className="space-y-2 text-slate-600 text-base md:text-lg leading-relaxed">
               <li><strong>Dirección:</strong> Quito, Ecuador</li>
-              <li><strong>Correo electrónico:</strong> viajes@volarix.com</li>
-              <li><strong>Teléfono / WhatsApp:</strong> +34 900 123 456</li>
+              <li><strong>Correo electrónico:</strong> {CONTACT_INFO.email}</li>
+              <li><strong>Teléfono / WhatsApp:</strong> {CONTACT_INFO.phone.display}</li>
             </ul>
           </LegalCard>
 
@@ -113,7 +114,7 @@ const AvisoLegalPage: React.FC = () => {
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-xl">
                 <Link 
-                  href="mailto:viajes@volarix.com" 
+                  href={`mailto:${CONTACT_INFO.email}`} 
                   className="flex items-center gap-4 bg-white/5 border border-white/10 rounded-2xl p-4 hover:bg-white/10 hover:border-brand-cyan/30 transition-all duration-300"
                 >
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-brand-cyan/20 text-brand-cyan">
@@ -121,12 +122,12 @@ const AvisoLegalPage: React.FC = () => {
                   </div>
                   <div>
                     <span className="block text-xs text-slate-400 font-bold uppercase tracking-wider">Correo Electrónico</span>
-                    <span className="text-sm md:text-base font-semibold text-white">viajes@volarix.com</span>
+                    <span className="text-sm md:text-base font-semibold text-white">{CONTACT_INFO.email}</span>
                   </div>
                 </Link>
 
                 <Link 
-                  href="https://wa.me/34900123456" 
+                  href={CONTACT_INFO.phone.whatsappLink} 
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 bg-white/5 border border-white/10 rounded-2xl p-4 hover:bg-white/10 hover:border-brand-teal/30 transition-all duration-300"
@@ -136,7 +137,7 @@ const AvisoLegalPage: React.FC = () => {
                   </div>
                   <div>
                     <span className="block text-xs text-slate-400 font-bold uppercase tracking-wider">WhatsApp Directo</span>
-                    <span className="text-sm md:text-base font-semibold text-white">+34 900 123 456</span>
+                    <span className="text-sm md:text-base font-semibold text-white">{CONTACT_INFO.phone.display}</span>
                   </div>
                 </Link>
               </div>

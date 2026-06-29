@@ -1,7 +1,12 @@
 import React from "react";
 import { Button } from "@/components/ui/Button";
+import { CONTACT_INFO } from "@/data/contact";
 
 export const AboutCTA: React.FC = () => {
+  const whatsappUrl = `https://wa.me/${CONTACT_INFO.phone.whatsapp}?text=${encodeURIComponent(
+    "Hola Volarix! Me gustaría planificar mi viaje."
+  )}`;
+
   return (
     <section id="sobre-nosotros-cta" className="relative py-24 bg-[#08121E] overflow-hidden text-center border-t border-white/5">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 h-[400px] w-[400px] rounded-full bg-brand-teal/5 blur-[120px]" />
@@ -17,7 +22,14 @@ export const AboutCTA: React.FC = () => {
           Habla con un asesor y descubre por qué cada vez más personas confían en Volarix para gestionar vuelos, visas y trámites internacionales de forma rápida, segura y online.
         </p>
         <div className="mt-8 flex justify-center">
-          <Button href="/#contacto" variant="secondary" showArrow className="shadow-lg shadow-brand-teal/10">
+          <Button 
+            href={whatsappUrl} 
+            target="_blank"
+            rel="noopener noreferrer"
+            variant="secondary" 
+            showArrow 
+            className="shadow-lg shadow-brand-teal/10"
+          >
             Planificar mi viaje
           </Button>
         </div>

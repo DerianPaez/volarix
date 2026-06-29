@@ -4,15 +4,14 @@ import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa6";
 import { Badge } from "@/components/ui/Badge";
 import { WhyChooseUsItem } from "@/data/whyChooseUs";
+import { CONTACT_INFO } from "@/data/contact";
 
 type WhyChooseUsRowProps = {
   item: WhyChooseUsItem;
 };
 
-const WHATSAPP_PHONE = "34900123456";
-
 export const WhyChooseUsRow: React.FC<WhyChooseUsRowProps> = ({ item }) => {
-  const whatsappUrl = `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(
+  const whatsappUrl = `https://wa.me/${CONTACT_INFO.phone.whatsapp}?text=${encodeURIComponent(
     item.whatsappMessage || "Hola Volarix! Me gustaría obtener más información."
   )}`;
 

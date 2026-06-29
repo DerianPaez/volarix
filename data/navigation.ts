@@ -1,5 +1,6 @@
 import React from "react";
 import { FaFacebookF, FaInstagram, FaTiktok } from "react-icons/fa6";
+import { CONTACT_INFO } from "./contact";
 
 export type NavLink = {
   label: string;
@@ -47,7 +48,7 @@ export const footerLinks: FooterLinkGroup[] = [
   {
     title: "Soporte",
     links: [
-      { label: "Hablar con un asesor", href: "#" },
+      { label: "Hablar con un asesor", href: CONTACT_INFO.phone.whatsappLink },
       { label: "Contacto", href: "/#contacto" },
       { label: "Términos de Servicio", href: "/terminos-de-servicio" },
       { label: "Privacidad", href: "/politica-de-privacidad" },

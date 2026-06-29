@@ -6,10 +6,15 @@ import { FiMenu, FiX } from "react-icons/fi";
 import { Button } from "@/components/ui/Button";
 import { navLinks } from "@/data/navigation";
 import Image from "next/image";
+import { CONTACT_INFO } from "@/data/contact";
 
 
 export const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const whatsappUrl = `https://wa.me/${CONTACT_INFO.phone.whatsapp}?text=${encodeURIComponent(
+    "Hola Volarix! Me gustaría realizar una reserva de viaje."
+  )}`;
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-slate-100 bg-white/80 backdrop-blur-md">
@@ -37,7 +42,13 @@ export const Navbar: React.FC = () => {
         </nav>
 
         <div className="hidden md:block">
-          <Button href="#contacto" variant="primary" className="px-6 py-2.5 text-sm">
+          <Button 
+            href={whatsappUrl} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            variant="primary" 
+            className="px-6 py-2.5 text-sm"
+          >
             Reservar
           </Button>
         </div>
@@ -68,7 +79,9 @@ export const Navbar: React.FC = () => {
             </Link>
           ))}
           <Button
-            href="#contacto"
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             variant="primary"
             className="w-full py-3 mt-2"
             onClick={() => setIsOpen(false)}

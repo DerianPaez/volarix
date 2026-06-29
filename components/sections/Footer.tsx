@@ -49,6 +49,8 @@ export const Footer: React.FC = () => {
                         ) : (
                           <Link
                             href={link.href}
+                            target={link.href.startsWith("http") ? "_blank" : undefined}
+                            rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
                             className="text-slate-500 hover:text-brand-teal text-sm transition-colors duration-200"
                           >
                             {link.label}

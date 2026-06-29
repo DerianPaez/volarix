@@ -7,6 +7,7 @@ import { IoAirplane } from "react-icons/io5";
 import { HiSparkles } from "react-icons/hi2";
 import { FeatureIndicator } from "@/components/ui/FeatureIndicator";
 import { heroFeatures } from "@/data/hero";
+import { CONTACT_INFO } from "@/data/contact";
 
 export const Hero: React.FC = () => {
   return (
@@ -43,7 +44,8 @@ export const Hero: React.FC = () => {
 
             <div className="flex flex-wrap gap-4 pt-1 justify-center lg:justify-start">
               <Link
-                href="https://wa.me/#"
+                href={CONTACT_INFO.phone.whatsappLink}
+                target="_blank"
                 className="inline-flex items-center gap-2.5 px-7 py-4 text-base font-semibold text-white bg-brand-navy rounded-2xl hover:bg-brand-navy/95 transition-all duration-300 shadow-md shadow-brand-navy/15 cursor-pointer active:scale-95 group relative overflow-hidden after:absolute after:inset-0 after:-translate-x-full hover:after:translate-x-full after:bg-linear-to-r after:from-transparent after:via-white/20 after:to-transparent after:transition-transform after:duration-1000 after:ease-in-out after:-skew-x-12"
               >
                 <FaWhatsapp className="h-5.5 w-5.5 text-emerald-400 transform transition-all duration-300 group-hover:scale-110 group-hover:rotate-6 relative z-10" />
