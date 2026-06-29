@@ -14,7 +14,7 @@ export type WhyChooseUsItem = {
 export const whyChooseUsList: WhyChooseUsItem[] = [
   {
     id: "01",
-    tag: "GESTIÓN INTEGRAL",
+    tag: "gestión integral",
     title: "Nosotros gestionamos todo por ti",
     description:
       "Desde la reserva de vuelos hasta la gestión de citas para visas, nos encargamos de cada paso para que ahorres tiempo. Centralizamos todo el proceso con atención personalizada y seguimiento constante.",
@@ -27,7 +27,7 @@ export const whyChooseUsList: WhyChooseUsItem[] = [
   },
   {
     id: "02",
-    tag: "DIGITALIZACIÓN TOTAL",
+    tag: "digitalización total",
     title: "Menos trámites, más viajes",
     description:
       "Olvídate de procesos complicados y largas búsquedas. Simplificamos cada gestión con herramientas digitales y atención rápida para que dediques menos tiempo a trámites y más a viajar.",
@@ -40,7 +40,7 @@ export const whyChooseUsList: WhyChooseUsItem[] = [
   },
   {
     id: "03",
-    tag: "RESPALDO PREMIUM",
+    tag: "respaldo premium",
     title: "Viaja con total tranquilidad",
     description:
       "Te acompañamos antes, durante y después de tu viaje para que siempre tengas el respaldo que necesitas. Recibe información clara, atención personalizada y seguimiento continuo en cada etapa del proceso.",

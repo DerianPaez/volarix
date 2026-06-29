@@ -6,7 +6,7 @@ export const AboutHero: React.FC = () => {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 h-[600px] w-[600px] rounded-full bg-brand-teal/10 blur-[130px]" />
       <div className="mx-auto max-w-5xl px-6 md:px-10">
         <span className="text-xs font-bold uppercase tracking-widest text-brand-cyan">
-          CONOCE NUESTRO ORIGEN
+          conoce nuestro origen
         </span>
         <h1 className="font-outfit text-4xl font-extrabold text-white tracking-tight sm:text-6xl mt-3 leading-tight max-w-4xl mx-auto">
           Transformando la forma de gestionar viajes

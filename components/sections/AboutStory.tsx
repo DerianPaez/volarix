@@ -23,7 +23,7 @@ export const AboutStory: React.FC = () => {
 
           <div className="lg:col-span-6 text-left flex flex-col items-start">
             <span className="text-xs font-bold uppercase tracking-widest text-brand-teal">
-              NUESTRA HISTORIA
+              nuestra historia
             </span>
             <h2 className="font-outfit text-3xl font-extrabold text-brand-navy tracking-tight sm:text-4.5xl mt-3 leading-tight">
               Cómo nació el

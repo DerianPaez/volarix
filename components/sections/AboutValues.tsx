@@ -8,7 +8,7 @@ export const AboutValues: React.FC = () => {
     <section id="valores" className="py-20 md:py-28 lg:py-36 bg-white">
       <div className="mx-auto max-w-7xl px-6 md:px-10">
         <SectionHeader
-          badge="VALORES CORE"
+          badge="valores"
           titleNormal="Los pilares de"
           titleGradient="nuestro servicio"
           theme="light"

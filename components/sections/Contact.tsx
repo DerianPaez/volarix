@@ -45,7 +45,7 @@ export const Contact: React.FC = () => {
               />
               <ContactCard
                 icon={FiClock}
-                label="Soporte VIP"
+                label="soporte vip"
                 value="Conserjería y asistencia activa 24/7"
                 className="sm:col-span-2"
               />
